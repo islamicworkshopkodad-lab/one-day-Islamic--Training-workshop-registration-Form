@@ -144,26 +144,60 @@
       </div>
     </form>
   </section>
+<section id="viewSuccess" class="view hidden">
+  <div class="card success-card">
 
-  <section id="viewSuccess" class="view hidden">
-    <div class="success-card" id="printArea">
-      <p class="success-college">One-Day Islamic Workshop</p>
-      <h1 class="success-title">Registration Successful</h1>
-      <dl class="success-details">
-        <div><dt>Student name</dt><dd id="sName">—</dd></div>
-        <div><dt>Registration ID</dt><dd id="sRegId" class="reg-id">—</dd></div>
-        <div><dt>Student mobile</dt><dd id="sMobile">—</dd></div>
-        <div><dt>Qualification</dt><dd id="sQualification">—</dd></div>
-        <div><dt>Constituency</dt><dd id="sConstituency">—</dd></div>
-        <div><dt>Registration date</dt><dd id="sDate">—</dd></div>
-      </dl>
-      <p class="success-note">Please save your Registration ID for workshop attendance and future communication.</p>
-      <div class="success-actions no-print">
-        <button type="button" class="btn btn-primary" id="printBtn">Print registration</button>
-        <button type="button" class="btn btn-ghost" id="newRegBtn">Register another participant</button>
-      </div>
+    <div class="success-header">
+      <h1>One Day Islamic Training Workshop</h1>
+      <h2>Registration Successful</h2>
     </div>
-  </section>
+
+    <div class="success-details">
+
+      <div class="success-row">
+        <span>Participant</span>
+        <strong id="sName">—</strong>
+      </div>
+
+      <div class="success-row">
+        <span>Registration ID</span>
+        <strong id="sRegId">—</strong>
+      </div>
+
+      <div class="success-row">
+        <span>Date</span>
+        <strong>11 October 2026</strong>
+      </div>
+
+      <div class="success-row">
+        <span>Venue</span>
+        <strong>AR AR Function Hall, Kodad</strong>
+      </div>
+
+      <div class="success-row">
+        <span>Reporting Time</span>
+        <strong>8:30 AM</strong>
+      </div>
+
+    </div>
+
+    <p class="success-note">
+      Please save your Registration ID for workshop attendance
+      and future communication.
+    </p>
+
+    <div class="success-actions">
+      <button type="button" id="printBtn" class="primary-btn">
+        Print Registration
+      </button>
+
+      <button type="button" id="newRegBtn" class="secondary-btn">
+        Register Another Participant
+      </button>
+    </div>
+
+  </div>
+</section>
 
   <section id="viewAdminLogin" class="view hidden">
     <div class="page-intro">
