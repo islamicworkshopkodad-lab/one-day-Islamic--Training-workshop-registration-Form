@@ -284,17 +284,6 @@ registrationForm.addEventListener('submit', async function (e) {
     if (result.success) {
       document.getElementById('sName').textContent = data.studentName;
       document.getElementById('sRegId').textContent = result.registrationId;
-      document.getElementById('sMobile').textContent = data.studentMobile;
-
-      document.getElementById('sQualification').textContent =
-        data.qualification +
-        (data.collegeLevel ? ' - ' + data.collegeLevel : '');
-
-      document.getElementById('sConstituency').textContent =
-        data.constituency;
-
-      document.getElementById('sDate').textContent =
-        result.registrationDate;
 
       registrationForm.reset();
 
