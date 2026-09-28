@@ -55,7 +55,7 @@ const validators = {
   address: function (v) { return v.trim().length >= 5 ? '' : 'Enter the full address.'; },
   village: function (v) { return v.trim().length >= 2 ? '' : 'Enter the village.'; },
   constituency: function (v) { return v ? '' : 'Select a constituency.'; },
-  quranArabic: function (v) { return v ? '' : "Select Yes or No."; },
+  quranArabic: function (v) { return v ? '' : "Select an option for Qur'an reading."; },
   quranSuras: function (v) { return v ? '' : "Select how many Qur'an Surahs you can remember."; }
 };
 
@@ -71,7 +71,9 @@ function showFieldError(fieldName, message) {
 function validateField(fieldName) {
   const input = registrationForm.elements[fieldName];
   if (!input || !validators[fieldName]) return true;
-  const value = input.length ? input.value : input.value;
+  const value = input.length
+  ? Array.from(input).find(function (radio) { return radio.checked; })?.value || ''
+  : input.value;
   const message = validators[fieldName](value);
   showFieldError(fieldName, message);
   return message === '';
