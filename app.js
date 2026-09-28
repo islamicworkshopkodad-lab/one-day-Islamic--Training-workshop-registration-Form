@@ -70,8 +70,8 @@ function showFieldError(fieldName, message) {
 }
 function validateField(fieldName) {
   const input = registrationForm.elements[fieldName];
-  if (!input || !validators[fieldName]) return true;
-  const value = input.length && input[0] && input[0].type === 'radio'
+  if (!input || !validators[fieldName]) return true
+  const value = input.type === 'radio'
   ? Array.from(input).find(function (radio) { return radio.checked; })?.value || ''
   : input.value;
   const message = validators[fieldName](value);
